@@ -1,0 +1,128 @@
+<mat-toolbar color="primary" class="example-toolbar" >
+
+    <a mat-flat-button href="." color="primary" >
+
+        <h1>EMILYN</h1>
+      </a>
+
+    <div>
+        <button mat-raised-button color="primary" style="margin: 5px" [matMenuTriggerFor]="Proyec">Usuario</button>
+        <mat-menu #Proyec="matMenu">
+            <a mat-menu-item href="." >Usuario</a>
+        </mat-menu>
+    </div>
+     <div>
+        <button mat-raised-button color="primary" style="margin: 5px" [matMenuTriggerFor]="usuario">Cliente</button>
+        <mat-menu #usuario="matMenu">
+            <a mat-menu-item href="." >Cleinte</a>
+
+            </mat-menu>
+    </div>
+
+    <div>
+        <button mat-raised-button color="primary" style="margin: 5px" [matMenuTriggerFor]="usuario">Producto</button>
+        <mat-menu #usuario="matMenu">
+            <a mat-menu-item href="." >Producto</a>
+        </mat-menu>
+    </div>
+    <div>
+        <button mat-raised-button color="primary" style="margin: 5px" [matMenuTriggerFor]="usuario">Pedido</button>
+        <mat-menu #usuario="matMenu">
+            <a mat-menu-item href="." >Pedido</a>
+        </mat-menu>
+    </div>
+
+     <span class="example-spacer"></span>
+     <div>
+         <mat-form-field >
+            <input matInput placeholder="" >
+         </mat-form-field>
+
+          <button mat-raised-button color="primary" style="margin: 10px">Buscar</button>
+     </div>
+
+       <button mat-mini-fab [matMenuTriggerFor]="menu" color="primary">
+         Salir
+       </button>
+       <mat-menu #menu="matMenu">
+
+           <a mat-menu-item href="login" >Cerrar sesion</a>
+         </mat-menu>
+
+</mat-toolbar>
+
+
+
+<div class="container app" style="text-align:center">
+  <div class="row">
+    <div class="col-sm-12">
+      <h1 class="text-center">
+          Tienda Online EMILYN - Registrar Usuario
+      </h1>
+    </div>
+    </div>
+    <mat-horizontal-stepper >
+        <mat-step label="Usuario">
+
+            <mat-form-field class="example-full-width">
+                <input matInput placeholder="Numero De Identidficacion" name="id" style="margin: 5px">
+              </mat-form-field>
+
+              <mat-form-field class="example-full-width">
+                <input matInput placeholder="Nombres" name="NombresU" style="margin: 5px">
+              </mat-form-field>
+
+              <mat-form-field class="example-full-width">
+                <input matInput placeholder="Apellido" name="apellidoU" style="margin: 5px">
+              </mat-form-field>
+              <br/>
+              <mat-form-field class="example-full-width">
+                <input matInput placeholder="Direccion" name="DirecionU">
+              </mat-form-field>
+              <br/>
+              <mat-form-field class="example-full-width">
+                <input matInput placeholder="Telefono" name="telefonoU" style="margin: 5px" >
+              </mat-form-field>
+
+              <mat-form-field class="example-full-width">
+                <input matInput placeholder="Celular" name="CelularU" >
+              </mat-form-field>
+              <br/>
+              <mat-form-field class="example-full-width">
+                <input matInput placeholder="Correo Electronico" name="CorreoU">
+              </mat-form-field>
+            <br/>
+            <mat-form-field class="example-full-width">
+                <input matInput placeholder="Observaciones" name="observacionesU">
+              </mat-form-field>
+            <br/>
+            <mat-form-field class="example-full-width">
+                <input matInput placeholder="Usuario" name="usuario">
+              </mat-form-field>
+            <br/>
+            <mat-form-field class="example-full-width">
+                <input matInput placeholder="contraseña" name="contraseña" type="password">
+              </mat-form-field>
+            <br/>
+
+            <div class="text-right">
+               <button mat-raised-button matStepperNext color="primary">Siguiente</button>
+            </div>
+          </mat-step>
+        <mat-step label="Informacion de Usuario">
+
+
+
+
+
+            <br/>
+            <br/>
+            <div class="text-right">
+                <button style ="margin: 10px" mat-raised-button matStepperPrevious color="primary" >Atras</button>
+                <button mat-raised-button matStepperNext color="warn" (click)="alerta()"  >Guardar</button>
+            </div>
+          </mat-step>
+      </mat-horizontal-stepper>
+
+</div>
+

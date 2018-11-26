@@ -1,0 +1,115 @@
+<mat-toolbar color="primary" class="example-toolbar" >
+
+    <a mat-flat-button href="." color="primary" >
+
+        <h1>EMILYN</h1>
+      </a>
+
+    <div>
+        <button mat-raised-button color="primary" style="margin: 5px" [matMenuTriggerFor]="Proyec">Usuario</button>
+        <mat-menu #Proyec="matMenu">
+            <a mat-menu-item href="." >Usuario</a>
+        </mat-menu>
+    </div>
+     <div>
+        <button mat-raised-button color="primary" style="margin: 5px" [matMenuTriggerFor]="usuario">Cliente</button>
+        <mat-menu #usuario="matMenu">
+            <a mat-menu-item href="." >Cleinte</a>
+
+            </mat-menu>
+    </div>
+
+    <div>
+        <button mat-raised-button color="primary" style="margin: 5px" [matMenuTriggerFor]="usuario">Producto</button>
+        <mat-menu #usuario="matMenu">
+            <a mat-menu-item href="." >Producto</a>
+        </mat-menu>
+    </div>
+    <div>
+        <button mat-raised-button color="primary" style="margin: 5px" [matMenuTriggerFor]="usuario">Pedido</button>
+        <mat-menu #usuario="matMenu">
+            <a mat-menu-item href="." >Pedido</a>
+        </mat-menu>
+    </div>
+
+     <span class="example-spacer"></span>
+     <div>
+         <mat-form-field >
+            <input matInput placeholder="" >
+         </mat-form-field>
+
+          <button mat-raised-button color="primary" style="margin: 10px">Buscar</button>
+     </div>
+
+       <button mat-mini-fab [matMenuTriggerFor]="menu" color="primary">
+         Salir
+       </button>
+       <mat-menu #menu="matMenu">
+
+           <a mat-menu-item href="login" >Cerrar sesion</a>
+         </mat-menu>
+
+</mat-toolbar>
+
+
+
+<div class="container app" style="text-align:center">
+  <div class="row">
+    <div class="col-sm-12">
+      <h1 class="text-center">
+          Tienda Online EMILYN - Producto
+      </h1>
+    </div>
+    </div>
+    <mat-horizontal-stepper >
+        <mat-step label="Producto">
+
+            <mat-form-field class="example-full-width">
+                <input matInput placeholder="Código del producto" name="codigo" >
+              </mat-form-field>
+              <br/>
+              <mat-form-field class="example-full-width">
+                <input matInput placeholder="Categoria" name="categoria">
+              </mat-form-field>
+              <br/>
+              <mat-form-field class="example-full-width">
+                <input matInput placeholder="Cantidad en inventario" name="cantidad" >
+              </mat-form-field>
+              <br/>
+              <mat-form-field class="example-full-width">
+                <input matInput placeholder="Talla" name="talla">
+              </mat-form-field>
+              <br/>
+              <mat-form-field class="example-full-width">
+                <input matInput placeholder="Valor unitario" name="Valor" >
+              </mat-form-field>
+              <br/>
+              <mat-form-field class="example-full-width">
+                <input matInput placeholder="Descrpcion" >
+              </mat-form-field>
+              <br/>
+              <mat-form-field class="example-full-width">
+                <input matInput placeholder="Fecha de Modificasion" type="date" >
+              </mat-form-field>
+            <br/>
+
+            <div class="text-right">
+               <button mat-raised-button matStepperNext color="primary">Siguiente</button>
+            </div>
+          </mat-step>
+        <mat-step label="Informacion de Producto">
+
+
+
+
+
+            <br/>
+            <br/>
+            <div class="text-right">
+                <button style ="margin: 10px" mat-raised-button matStepperPrevious color="primary" >Atras</button>
+                <button mat-raised-button matStepperNext color="warn" (click)="alerta()"  >Guardar</button>
+            </div>
+          </mat-step>
+      </mat-horizontal-stepper>
+
+</div>
